@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops Concepts</title>
+</head>
+
+<body bgcolor="green">
+    <h2 align="center">Object Oriented Programming</h2>
+    <p id="home"><a href="#1">Classes and Objects</a></p>
+    <p id="home"><a href="#2">Constructors</a></p>
+    <p id="home"><a href="#3">Friend Function</a></p>
+    <p id="home"><a href="#4">Access Modifiers</a></p>
+    <h2 id="1">Classes and Object:<a href="#home">top</a></h2>
+    <p>A class is a user-defined data-type used to bind data and its associated functions together. It allows the data
+        (and functions) to be hidden, from external use. When defining a class, we are creating a new Abstract Data Type
+        (ADT) that can be treated like any other built-in data type.
+
+
+    </p>
+    <p>
+
+        The class body contains the declaration of variables and functions. These functions and variables are
+        collectively called as members of the class. They are usually grouped under two visibility labels, namely,
+        private and public.
+    </p>
+    <p>
+        The members that have been declared as private can be accessed only by the member functions. Such data hiding
+        using private declaration is the key feature of object-oriented programming. The use of the keyword private is
+        optional. By default, members of a class are private. public members can be accessed from outside the class
+        also.
+    </p>
+    <p>
+        An object is an instance of a class. It can be uniquely identified by its name. It has physical existence in the
+        memory.
+        Once a class has been declared, we can create its objects in the same way as variables of any other type. Thus,
+        an object is the variable of type class. Example:
+
+    </p>
+    <p>
+
+        If a class student is declared then we can create object of name s as,
+        Student s;
+    </p>
+    <h2 id="2">Characteristics of a constructor function:<a href="#home">top</a></h2>
+    <ol type="a">
+        <li>Its name is same as name of its parent class.</li>
+        <li>It gets invoked implicitly when an object of its class is created.</li>
+        <li>It should be declared in public section of the class.</li>
+        <li>It does not have return-type, (not even void).</li>
+        <li>It can have default arguments.</li>
+        <li>It can be overloaded.</li>
+        <li>It can not be inherited</li>
+        <li>It can not be a virtual function.</li>
+        <li>It can not contain argument of the same class to which it belongs.</li>
+    </ol>
+    <h2 id="3">Characteristics of a friend function:<a href="#home">top</a></h2>
+    <ol type="a">
+        <li>Unlike member function, a friend function is not invoked using an object name and the dot operator. It is
+            invoked like a normal function.</li>
+        <li>It can not access member names directly. It needs to use dot operator and object name to access members of
+            that object. (e.g. s.rollno)</li>
+        <li>It can not use this keyword.</li>
+        <li>It may be declared in any (private or public) part of the class.</li>
+        <li>A friend function has at least one argument which is of the type of the class (of which it is a friend).
+        </li>
+        <li>A class can have many friend functions</li>
+        <li>A function can be friend of many classes</li>
+        <li>Member function of one class may be friend function of another class.</li>
+        <li>Even a class can be friend of another class. In such case, all member functions of the friend class can
+            access private members of the class.</li>
+        <li>It is not in the scope of the class to which it has been declared as friend.</li>
+        <li>A friend function is not inherited.</li>
+
+    </ol>
+    <h2 id="4">Access Modifiers:<a href="#home">top</a></h2>
+    <p>There are three types of access modifiers in C++:</p>
+    <ul type="disc">
+        <li>public: A member declared with public access modifier is accessible outside the class. Any global function,
+            friend function, derived class and other class can access this member.
+        </li>
+        <li>private: A member declared with private access modifier is not accessible outside the class except its
+            friend functions. A private member can not be accessed in derived classes also.</li>
+        <li>protected: A member declared with protected access modifier is not accessible outside the class except its
+            friend functions and derived classes.</li>
+    </ul>
+    <P>Following table summarizes scope of members with different access modifiers.
+    </P>
+    
+    <table border="1" align="center">
+    
+        <tr>
+            
+                <td>Access Modifiers</td>
+                <td>within Class</td>
+                <td>Derived Class</td>
+                <td>Other Class</td>
+            
+        </tr>
+    
+        <tr>
+        <td>private</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        
+    </tr>
+        <tr>
+        <td>protected</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+        <tr>
+            <td>Public</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+</body>
+
+</html>
